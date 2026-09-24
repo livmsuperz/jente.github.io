@@ -695,3 +695,22 @@ body {
     }
 
 }
+.meaning-section {
+    margin-top: 20px;
+}
+
+.meaning-section h3 {
+    font-size: 19px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.meaning-section p {
+    margin: 0;
+}
+
+.meaning-section + .meaning-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(70, 60, 50, 0.25);
+}

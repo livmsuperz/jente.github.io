@@ -1,345 +1,501 @@
 const tarotCards = [
+
     // =========================
-    // MAJOR ARCANA - 22 KAARTEN
+    // MAJOR ARCANA
     // =========================
 
     {
         name: "The Fool",
-        meaning: "Nieuwe beginnen, avontuur, vrijheid en vertrouwen in wat komen gaat."
-    },
-    {
-        name: "The Magician",
-        meaning: "Creativiteit, mogelijkheden, zelfvertrouwen en het gebruiken van je talenten."
-    },
-    {
-        name: "The High Priestess",
-        meaning: "Intuïtie, geheimen, innerlijke wijsheid en luisteren naar je gevoel."
-    },
-    {
-        name: "The Empress",
-        meaning: "Groei, liefde, verzorging, creativiteit en overvloed."
-    },
-    {
-        name: "The Emperor",
-        meaning: "Structuur, verantwoordelijkheid, leiderschap en stabiliteit."
-    },
-    {
-        name: "The Hierophant",
-        meaning: "Traditie, regels, leren, geloof en advies van anderen."
-    },
-    {
-        name: "The Lovers",
-        meaning: "Liefde, verbinding, keuzes en harmonie tussen mensen."
-    },
-    {
-        name: "The Chariot",
-        meaning: "Wilskracht, vooruitgang, controle en vastberadenheid."
-    },
-    {
-        name: "Strength",
-        meaning: "Innerlijke kracht, moed, geduld en rustig omgaan met moeilijke situaties."
-    },
-    {
-        name: "The Hermit",
-        meaning: "Rust, nadenken, zelfkennis en tijd nemen voor jezelf."
-    },
-    {
-        name: "Wheel of Fortune",
-        meaning: "Verandering, nieuwe kansen, een nieuwe fase en veranderende omstandigheden."
-    },
-    {
-        name: "Justice",
-        meaning: "Eerlijkheid, verantwoordelijkheid, balans en gevolgen van keuzes."
-    },
-    {
-        name: "The Hanged Man",
-        meaning: "Een andere kijk op een situatie, geduld en tijdelijk iets loslaten."
-    },
-    {
-        name: "Death",
-        meaning: "Het einde van een fase en het begin van iets nieuws."
-    },
-    {
-        name: "Temperance",
-        meaning: "Balans, geduld, harmonie en het vinden van een middenweg."
-    },
-    {
-        name: "The Devil",
-        meaning: "Verleiding, vastzitten, ongezonde gewoontes en materiële verlangens."
-    },
-    {
-        name: "The Tower",
-        meaning: "Plotselinge verandering, een onverwachte gebeurtenis en oude structuren die verdwijnen."
-    },
-    {
-        name: "The Star",
-        meaning: "Hoop, inspiratie, vertrouwen en een positieve nieuwe richting."
-    },
-    {
-        name: "The Moon",
-        meaning: "Mysterie, onzekerheid, dromen, emoties en vertrouwen op je intuïtie."
-    },
-    {
-        name: "The Sun",
-        meaning: "Geluk, succes, energie, duidelijkheid en positieve gebeurtenissen."
-    },
-    {
-        name: "Judgement",
-        meaning: "Reflectie, een belangrijke beslissing, vergeving en een nieuwe start."
-    },
-    {
-        name: "The World",
-        meaning: "Voltooiing, succes, groei en het afsluiten van een belangrijke fase."
+        upright: "Nieuwe beginnen, avontuur, vrijheid, spontaniteit en vertrouwen in wat komen gaat.",
+        reversed: "Roekeloosheid, impulsieve keuzes, gebrek aan richting of bang zijn om iets nieuws te proberen."
     },
 
+    {
+        name: "The Magician",
+        upright: "Creativiteit, mogelijkheden, zelfvertrouwen en het gebruiken van je talenten.",
+        reversed: "Onzekerheid, ongebruikte talenten, manipulatie of kansen niet goed benutten."
+    },
+
+    {
+        name: "The High Priestess",
+        upright: "Intuïtie, geheimen, innerlijke wijsheid en luisteren naar je gevoel.",
+        reversed: "Je intuïtie negeren, verborgen informatie, verwarring of te veel luisteren naar anderen."
+    },
+
+    {
+        name: "The Empress",
+        upright: "Groei, liefde, verzorging, creativiteit en overvloed.",
+        reversed: "Gebrek aan zelfzorg, creatieve blokkade, afhankelijkheid of te veel zorgen voor anderen."
+    },
+
+    {
+        name: "The Emperor",
+        upright: "Structuur, verantwoordelijkheid, leiderschap, discipline en stabiliteit.",
+        reversed: "Te veel controle, koppigheid, machtsproblemen of gebrek aan structuur."
+    },
+
+    {
+        name: "The Hierophant",
+        upright: "Traditie, regels, leren, geloof, kennis en advies van anderen.",
+        reversed: "Regels in twijfel trekken, onafhankelijk denken, rebellie of een eigen pad kiezen."
+    },
+
+    {
+        name: "The Lovers",
+        upright: "Liefde, verbinding, keuzes, harmonie en sterke relaties.",
+        reversed: "Onenigheid, moeilijke keuzes, misverstanden of een gebrek aan verbinding."
+    },
+
+    {
+        name: "The Chariot",
+        upright: "Wilskracht, vooruitgang, controle, vastberadenheid en succes door doorzettingsvermogen.",
+        reversed: "Gebrek aan richting, verlies van controle, twijfel of te weinig vooruitgang."
+    },
+
+    {
+        name: "Strength",
+        upright: "Innerlijke kracht, moed, geduld, vertrouwen en rustig omgaan met moeilijke situaties.",
+        reversed: "Onzekerheid, weinig zelfvertrouwen, twijfel aan jezelf of moeite om rustig te blijven."
+    },
+
+    {
+        name: "The Hermit",
+        upright: "Rust, nadenken, zelfkennis, wijsheid en tijd nemen voor jezelf.",
+        reversed: "Te veel afzondering, eenzaamheid, jezelf afsluiten of advies van anderen negeren."
+    },
+
+    {
+        name: "Wheel of Fortune",
+        upright: "Verandering, nieuwe kansen, een nieuwe fase en veranderende omstandigheden.",
+        reversed: "Tegenslag, ongewenste veranderingen, vastzitten of het gevoel geen controle te hebben."
+    },
+
+    {
+        name: "Justice",
+        upright: "Eerlijkheid, verantwoordelijkheid, balans en gevolgen van keuzes.",
+        reversed: "Oneerlijkheid, gebrek aan verantwoordelijkheid, verkeerde beoordeling of onbalans."
+    },
+
+    {
+        name: "The Hanged Man",
+        upright: "Een andere kijk op een situatie, geduld en tijdelijk iets loslaten.",
+        reversed: "Vastzitten, weerstand tegen verandering, uitstel of moeite om iets los te laten."
+    },
+
+    {
+        name: "Death",
+        upright: "Het einde van een fase, verandering, loslaten en het begin van iets nieuws.",
+        reversed: "Moeite met verandering, vasthouden aan het verleden of een verandering uitstellen."
+    },
+
+    {
+        name: "Temperance",
+        upright: "Balans, geduld, harmonie en het vinden van een middenweg.",
+        reversed: "Onbalans, ongeduld, te veel van iets of moeite om verschillende dingen te combineren."
+    },
+
+    {
+        name: "The Devil",
+        upright: "Verleiding, vastzitten, ongezonde gewoontes en materiële verlangens.",
+        reversed: "Loskomen van beperkingen, slechte gewoontes doorbreken en meer vrijheid krijgen."
+    },
+
+    {
+        name: "The Tower",
+        upright: "Plotselinge verandering, onverwachte gebeurtenissen en oude structuren die verdwijnen.",
+        reversed: "Verandering proberen te vermijden, angst voor verandering of een moeilijke verandering die langzaam plaatsvindt."
+    },
+
+    {
+        name: "The Star",
+        upright: "Hoop, inspiratie, vertrouwen, rust en een positieve nieuwe richting.",
+        reversed: "Twijfel, verlies van hoop, onzekerheid of moeite om positief te blijven."
+    },
+
+    {
+        name: "The Moon",
+        upright: "Mysterie, onzekerheid, dromen, emoties en vertrouwen op je intuïtie.",
+        reversed: "Verwarring die duidelijker wordt, verborgen gevoelens of angst die langzaam wordt losgelaten."
+    },
+
+    {
+        name: "The Sun",
+        upright: "Geluk, succes, energie, duidelijkheid en positieve gebeurtenissen.",
+        reversed: "Tijdelijke teleurstelling, minder energie, onzekerheid of moeite om het positieve te zien."
+    },
+
+    {
+        name: "Judgement",
+        upright: "Reflectie, een belangrijke beslissing, vergeving en een nieuwe start.",
+        reversed: "Zelfkritiek, spijt, moeite om het verleden los te laten of bang zijn om een beslissing te nemen."
+    },
+
+    {
+        name: "The World",
+        upright: "Voltooiing, succes, groei en het afsluiten van een belangrijke fase.",
+        reversed: "Een onafgemaakt doel, vertraging, gebrek aan afsluiting of moeite om verder te gaan."
+    },
+
+
     // =========================
-    // WANDS - 14 KAARTEN
+    // WANDS
     // =========================
 
     {
         name: "Ace of Wands",
-        meaning: "Nieuwe energie, inspiratie, enthousiasme en een nieuw idee."
-    },
-    {
-        name: "Two of Wands",
-        meaning: "Plannen maken, vooruitkijken en nadenken over nieuwe mogelijkheden."
-    },
-    {
-        name: "Three of Wands",
-        meaning: "Vooruitgang, groei en wachten op de resultaten van je plannen."
-    },
-    {
-        name: "Four of Wands",
-        meaning: "Feest, stabiliteit, vriendschap en een gelukkige gebeurtenis."
-    },
-    {
-        name: "Five of Wands",
-        meaning: "Concurrentie, meningsverschillen en verschillende ideeën."
-    },
-    {
-        name: "Six of Wands",
-        meaning: "Succes, erkenning, zelfvertrouwen en trots."
-    },
-    {
-        name: "Seven of Wands",
-        meaning: "Voor jezelf opkomen, grenzen stellen en volhouden."
-    },
-    {
-        name: "Eight of Wands",
-        meaning: "Snelle ontwikkelingen, nieuws, beweging en vooruitgang."
-    },
-    {
-        name: "Nine of Wands",
-        meaning: "Doorzetten, voorzichtigheid en sterk blijven ondanks moeilijkheden."
-    },
-    {
-        name: "Ten of Wands",
-        meaning: "Veel verantwoordelijkheid, druk en te veel taken tegelijk."
-    },
-    {
-        name: "Page of Wands",
-        meaning: "Nieuwsgierigheid, enthousiasme, avontuur en nieuwe ideeën."
-    },
-    {
-        name: "Knight of Wands",
-        meaning: "Passie, actie, avontuur en snel ergens voor gaan."
-    },
-    {
-        name: "Queen of Wands",
-        meaning: "Zelfvertrouwen, warmte, onafhankelijkheid en creativiteit."
-    },
-    {
-        name: "King of Wands",
-        meaning: "Leiderschap, visie, ambitie en vertrouwen."
+        upright: "Nieuwe energie, inspiratie, enthousiasme en een nieuw idee.",
+        reversed: "Gebrek aan motivatie, vertraging, weinig energie of een idee dat nog niet klaar is om te beginnen."
     },
 
+    {
+        name: "Two of Wands",
+        upright: "Plannen maken, vooruitkijken en nadenken over nieuwe mogelijkheden.",
+        reversed: "Twijfel, angst voor het onbekende, slechte planning of moeite om een beslissing te nemen."
+    },
+
+    {
+        name: "Three of Wands",
+        upright: "Vooruitgang, groei en wachten op de resultaten van je plannen.",
+        reversed: "Vertraging, gebrek aan vooruitgang of plannen die anders lopen dan verwacht."
+    },
+
+    {
+        name: "Four of Wands",
+        upright: "Feest, stabiliteit, vriendschap en een gelukkige gebeurtenis.",
+        reversed: "Spanning thuis, instabiliteit, een uitgestelde viering of gebrek aan harmonie."
+    },
+
+    {
+        name: "Five of Wands",
+        upright: "Concurrentie, meningsverschillen en verschillende ideeën.",
+        reversed: "Een conflict oplossen, spanning verminderen of proberen vrede te sluiten."
+    },
+
+    {
+        name: "Six of Wands",
+        upright: "Succes, erkenning, zelfvertrouwen en trots.",
+        reversed: "Gebrek aan erkenning, onzekerheid, teleurstelling of succes dat minder wordt gevoeld."
+    },
+
+    {
+        name: "Seven of Wands",
+        upright: "Voor jezelf opkomen, grenzen stellen en volhouden.",
+        reversed: "Opgeven, onzekerheid, je overweldigd voelen of moeite hebben om je grenzen te bewaken."
+    },
+
+    {
+        name: "Eight of Wands",
+        upright: "Snelle ontwikkelingen, nieuws, beweging en vooruitgang.",
+        reversed: "Vertraging, misverstanden, wachten op nieuws of gebrek aan vooruitgang."
+    },
+
+    {
+        name: "Nine of Wands",
+        upright: "Doorzetten, voorzichtigheid en sterk blijven ondanks moeilijkheden.",
+        reversed: "Uitputting, onzekerheid, moeite om vol te houden of te veel verantwoordelijkheid dragen."
+    },
+
+    {
+        name: "Ten of Wands",
+        upright: "Veel verantwoordelijkheid, druk en te veel taken tegelijk.",
+        reversed: "Een last loslaten, hulp accepteren of leren om niet alles alleen te dragen."
+    },
+
+    {
+        name: "Page of Wands",
+        upright: "Nieuwsgierigheid, enthousiasme, avontuur en nieuwe ideeën.",
+        reversed: "Gebrek aan richting, onzekerheid, impulsiviteit of een plan dat niet goed wordt uitgevoerd."
+    },
+
+    {
+        name: "Knight of Wands",
+        upright: "Passie, actie, avontuur en snel ergens voor gaan.",
+        reversed: "Impulsiviteit, ongeduld, roekeloosheid of snel van plan veranderen."
+    },
+
+    {
+        name: "Queen of Wands",
+        upright: "Zelfvertrouwen, warmte, onafhankelijkheid en creativiteit.",
+        reversed: "Onzekerheid, jaloezie, gebrek aan zelfvertrouwen of te veel aandacht voor wat anderen denken."
+    },
+
+    {
+        name: "King of Wands",
+        upright: "Leiderschap, visie, ambitie en vertrouwen.",
+        reversed: "Te veel controle, impulsiviteit, arrogantie of gebrek aan richting."
+    },
+
+
     // =========================
-    // CUPS - 14 KAARTEN
+    // CUPS
     // =========================
 
     {
         name: "Ace of Cups",
-        meaning: "Nieuwe emoties, liefde, geluk en emotionele groei."
-    },
-    {
-        name: "Two of Cups",
-        meaning: "Verbinding, liefde, vriendschap en wederzijds begrip."
-    },
-    {
-        name: "Three of Cups",
-        meaning: "Vriendschap, feest, gezelligheid en samen zijn."
-    },
-    {
-        name: "Four of Cups",
-        meaning: "Ontevredenheid, verveling en kansen die je misschien niet ziet."
-    },
-    {
-        name: "Five of Cups",
-        meaning: "Teleurstelling, verdriet en focussen op wat verloren is gegaan."
-    },
-    {
-        name: "Six of Cups",
-        meaning: "Herinneringen, nostalgie, jeugd en mensen uit het verleden."
-    },
-    {
-        name: "Seven of Cups",
-        meaning: "Veel mogelijkheden, dromen en moeite hebben met kiezen."
-    },
-    {
-        name: "Eight of Cups",
-        meaning: "Iets achterlaten en op zoek gaan naar een nieuwe richting."
-    },
-    {
-        name: "Nine of Cups",
-        meaning: "Tevredenheid, geluk en wensen die uitkomen."
-    },
-    {
-        name: "Ten of Cups",
-        meaning: "Familie, liefde, harmonie en emotioneel geluk."
-    },
-    {
-        name: "Page of Cups",
-        meaning: "Gevoeligheid, creativiteit, intuïtie en onverwacht nieuws."
-    },
-    {
-        name: "Knight of Cups",
-        meaning: "Romantiek, gevoelens, idealen en een aanbod."
-    },
-    {
-        name: "Queen of Cups",
-        meaning: "Empathie, zorgzaamheid, intuïtie en emotionele wijsheid."
-    },
-    {
-        name: "King of Cups",
-        meaning: "Emotionele controle, wijsheid, begrip en kalmte."
+        upright: "Nieuwe emoties, liefde, geluk en emotionele groei.",
+        reversed: "Emotionele blokkade, gevoelens onderdrukken of moeite hebben om liefde te ontvangen."
     },
 
+    {
+        name: "Two of Cups",
+        upright: "Verbinding, liefde, vriendschap en wederzijds begrip.",
+        reversed: "Misverstanden, afstand, ruzie of een gebrek aan wederzijds begrip."
+    },
+
+    {
+        name: "Three of Cups",
+        upright: "Vriendschap, feest, gezelligheid en samen zijn.",
+        reversed: "Drama in een vriendengroep, buitengesloten voelen of te veel feest en afleiding."
+    },
+
+    {
+        name: "Four of Cups",
+        upright: "Ontevredenheid, verveling en kansen die je misschien niet ziet.",
+        reversed: "Nieuwe motivatie, kansen opnieuw zien of weer interesse krijgen in iets."
+    },
+
+    {
+        name: "Five of Cups",
+        upright: "Teleurstelling, verdriet en focussen op wat verloren is gegaan.",
+        reversed: "Herstel, acceptatie, vooruitkijken en langzaam loslaten."
+    },
+
+    {
+        name: "Six of Cups",
+        upright: "Herinneringen, nostalgie, jeugd en mensen uit het verleden.",
+        reversed: "Vasthouden aan het verleden, moeite met loslaten of eindelijk verdergaan."
+    },
+
+    {
+        name: "Seven of Cups",
+        upright: "Veel mogelijkheden, dromen en moeite hebben met kiezen.",
+        reversed: "Meer duidelijkheid, een keuze maken en realistischer naar mogelijkheden kijken."
+    },
+
+    {
+        name: "Eight of Cups",
+        upright: "Iets achterlaten en op zoek gaan naar een nieuwe richting.",
+        reversed: "Bang zijn om iets los te laten, teruggaan naar het verleden of blijven hangen."
+    },
+
+    {
+        name: "Nine of Cups",
+        upright: "Tevredenheid, geluk en wensen die uitkomen.",
+        reversed: "Ontevredenheid, iets blijkt minder leuk dan verwacht of te veel gericht zijn op wensen."
+    },
+
+    {
+        name: "Ten of Cups",
+        upright: "Familie, liefde, harmonie en emotioneel geluk.",
+        reversed: "Spanning in relaties, misverstanden thuis of een gebrek aan harmonie."
+    },
+
+    {
+        name: "Page of Cups",
+        upright: "Gevoeligheid, creativiteit, intuïtie en onverwacht nieuws.",
+        reversed: "Emotionele onzekerheid, onvolwassen reacties of moeite om gevoelens te begrijpen."
+    },
+
+    {
+        name: "Knight of Cups",
+        upright: "Romantiek, gevoelens, idealen en een aanbod.",
+        reversed: "Onrealistische verwachtingen, stemmingswisselingen of mooie woorden zonder actie."
+    },
+
+    {
+        name: "Queen of Cups",
+        upright: "Empathie, zorgzaamheid, intuïtie en emotionele wijsheid.",
+        reversed: "Emotionele overbelasting, te veel zorgen voor anderen of je eigen behoeften vergeten."
+    },
+
+    {
+        name: "King of Cups",
+        upright: "Emotionele controle, wijsheid, begrip en kalmte.",
+        reversed: "Emotionele instabiliteit, gevoelens onderdrukken of moeite hebben met emoties."
+    },
+
+
     // =========================
-    // SWORDS - 14 KAARTEN
+    // SWORDS
     // =========================
 
     {
         name: "Ace of Swords",
-        meaning: "Duidelijkheid, waarheid, nieuwe ideeën en een belangrijke beslissing."
-    },
-    {
-        name: "Two of Swords",
-        meaning: "Twijfel, een moeilijke keuze en iets niet willen zien."
-    },
-    {
-        name: "Three of Swords",
-        meaning: "Verdriet, teleurstelling en pijnlijke emoties."
-    },
-    {
-        name: "Four of Swords",
-        meaning: "Rust, herstel, pauze en tijd nemen om na te denken."
-    },
-    {
-        name: "Five of Swords",
-        meaning: "Conflict, spanning en winnen ten koste van anderen."
-    },
-    {
-        name: "Six of Swords",
-        meaning: "Een moeilijke situatie achter je laten en naar rustiger water gaan."
-    },
-    {
-        name: "Seven of Swords",
-        meaning: "Geheimen, voorzichtigheid, onafhankelijkheid en iets achterhouden."
-    },
-    {
-        name: "Eight of Swords",
-        meaning: "Je beperkt voelen, angst en het idee dat je geen uitweg hebt."
-    },
-    {
-        name: "Nine of Swords",
-        meaning: "Zorgen, stress, piekeren en angst."
-    },
-    {
-        name: "Ten of Swords",
-        meaning: "Een moeilijk einde en het afsluiten van een zware periode."
-    },
-    {
-        name: "Page of Swords",
-        meaning: "Nieuwsgierigheid, communicatie, leren en alert zijn."
-    },
-    {
-        name: "Knight of Swords",
-        meaning: "Snelheid, vastberadenheid, directe communicatie en actie."
-    },
-    {
-        name: "Queen of Swords",
-        meaning: "Onafhankelijkheid, eerlijkheid, duidelijk denken en grenzen."
-    },
-    {
-        name: "King of Swords",
-        meaning: "Logica, wijsheid, eerlijkheid en rationele beslissingen."
+        upright: "Duidelijkheid, waarheid, nieuwe ideeën en een belangrijke beslissing.",
+        reversed: "Verwarring, misverstanden, gebrek aan duidelijkheid of verkeerde informatie."
     },
 
+    {
+        name: "Two of Swords",
+        upright: "Twijfel, een moeilijke keuze en iets niet willen zien.",
+        reversed: "Een beslissing nemen, verborgen informatie ontdekken of niet langer kunnen blijven twijfelen."
+    },
+
+    {
+        name: "Three of Swords",
+        upright: "Verdriet, teleurstelling en pijnlijke emoties.",
+        reversed: "Herstel, vergeving, genezing en langzaam verdergaan."
+    },
+
+    {
+        name: "Four of Swords",
+        upright: "Rust, herstel, pauze en tijd nemen om na te denken.",
+        reversed: "Rusteloosheid, te snel weer doorgaan of moeite hebben om voldoende rust te nemen."
+    },
+
+    {
+        name: "Five of Swords",
+        upright: "Conflict, spanning en winnen ten koste van anderen.",
+        reversed: "Een conflict beëindigen, vergeving of proberen vrede te sluiten."
+    },
+
+    {
+        name: "Six of Swords",
+        upright: "Een moeilijke situatie achter je laten en naar rustiger water gaan.",
+        reversed: "Moeite om verder te gaan, vasthouden aan het verleden of terugkeren naar een oude situatie."
+    },
+
+    {
+        name: "Seven of Swords",
+        upright: "Geheimen, voorzichtigheid, onafhankelijkheid en iets achterhouden.",
+        reversed: "Een geheim komt uit, eerlijkheid of erkennen dat iets niet goed is aangepakt."
+    },
+
+    {
+        name: "Eight of Swords",
+        upright: "Je beperkt voelen, angst en het idee dat je geen uitweg hebt.",
+        reversed: "Bevrijding, nieuwe mogelijkheden zien en beseffen dat je meer keuze hebt dan gedacht."
+    },
+
+    {
+        name: "Nine of Swords",
+        upright: "Zorgen, stress, piekeren en angst.",
+        reversed: "Angst verminderen, zorgen loslaten of langzaam herstellen van een moeilijke periode."
+    },
+
+    {
+        name: "Ten of Swords",
+        upright: "Een moeilijk einde en het afsluiten van een zware periode.",
+        reversed: "Herstel, een nieuw begin en langzaam weer vooruitkijken."
+    },
+
+    {
+        name: "Page of Swords",
+        upright: "Nieuwsgierigheid, communicatie, leren en alert zijn.",
+        reversed: "Roddel, misverstanden, impulsieve woorden of informatie niet goed controleren."
+    },
+
+    {
+        name: "Knight of Swords",
+        upright: "Snelheid, vastberadenheid, directe communicatie en actie.",
+        reversed: "Roekeloosheid, agressieve communicatie, ongeduld of te snel handelen."
+    },
+
+    {
+        name: "Queen of Swords",
+        upright: "Onafhankelijkheid, eerlijkheid, duidelijk denken en grenzen.",
+        reversed: "Kritiek, afstandelijkheid, bitterheid of te streng zijn voor jezelf of anderen."
+    },
+
+    {
+        name: "King of Swords",
+        upright: "Logica, wijsheid, eerlijkheid en rationele beslissingen.",
+        reversed: "Misbruik van macht, harde communicatie, manipulatie of oneerlijke beslissingen."
+    },
+
+
     // =========================
-    // PENTACLES - 14 KAARTEN
+    // PENTACLES
     // =========================
 
     {
         name: "Ace of Pentacles",
-        meaning: "Een nieuwe kans, financiële groei, werk en stabiliteit."
+        upright: "Een nieuwe kans, financiële groei, werk en stabiliteit.",
+        reversed: "Een gemiste kans, vertraging, financiële onzekerheid of een plan dat niet doorgaat."
     },
+
     {
         name: "Two of Pentacles",
-        meaning: "Balans zoeken, meerdere dingen tegelijk regelen en flexibiliteit."
+        upright: "Balans zoeken, meerdere dingen tegelijk regelen en flexibiliteit.",
+        reversed: "Overweldigd zijn, slechte planning of moeite om verschillende dingen te combineren."
     },
+
     {
         name: "Three of Pentacles",
-        meaning: "Samenwerken, leren, talent en goed werk."
+        upright: "Samenwerken, leren, talent en goed werk.",
+        reversed: "Slechte samenwerking, gebrek aan motivatie of werk dat niet goed wordt afgestemd."
     },
+
     {
         name: "Four of Pentacles",
-        meaning: "Vasthouden aan zekerheid, voorzichtigheid en controle."
+        upright: "Vasthouden aan zekerheid, voorzichtigheid en controle.",
+        reversed: "Loslaten, vrijgevigheid of leren om minder controle te willen hebben."
     },
+
     {
         name: "Five of Pentacles",
-        meaning: "Moeilijkheden, onzekerheid en het gevoel er alleen voor te staan."
+        upright: "Moeilijkheden, onzekerheid en het gevoel er alleen voor te staan.",
+        reversed: "Hulp vinden, herstel en langzaam uit een moeilijke situatie komen."
     },
+
     {
         name: "Six of Pentacles",
-        meaning: "Geven, ontvangen, hulp en vrijgevigheid."
+        upright: "Geven, ontvangen, hulp en vrijgevigheid.",
+        reversed: "Ongelijkheid, hulp met voorwaarden of te veel geven zonder iets terug te krijgen."
     },
+
     {
         name: "Seven of Pentacles",
-        meaning: "Geduld, hard werken en wachten tot je inspanningen resultaat geven."
+        upright: "Geduld, hard werken en wachten tot je inspanningen resultaat geven.",
+        reversed: "Ongeduld, weinig resultaat zien of twijfelen of je inspanningen het waard zijn."
     },
+
     {
         name: "Eight of Pentacles",
-        meaning: "Oefenen, leren, hard werken en beter worden in iets."
+        upright: "Oefenen, leren, hard werken en beter worden in iets.",
+        reversed: "Gebrek aan motivatie, slordigheid of niet genoeg aandacht besteden aan iets."
     },
+
     {
         name: "Nine of Pentacles",
-        meaning: "Onafhankelijkheid, succes, comfort en genieten van je resultaten."
+        upright: "Onafhankelijkheid, succes, comfort en genieten van je resultaten.",
+        reversed: "Afhankelijkheid, financiële onzekerheid of succes dat minder voldoening geeft."
     },
+
     {
         name: "Ten of Pentacles",
-        meaning: "Familie, zekerheid, stabiliteit en langdurige rijkdom."
+        upright: "Familie, zekerheid, stabiliteit en langdurige rijkdom.",
+        reversed: "Familieproblemen, financiële onzekerheid of instabiliteit."
     },
+
     {
         name: "Page of Pentacles",
-        meaning: "Leren, ambitie, nieuwe kansen en praktische plannen."
+        upright: "Leren, ambitie, nieuwe kansen en praktische plannen.",
+        reversed: "Gebrek aan focus, uitstel, slechte planning of motivatieproblemen."
     },
+
     {
         name: "Knight of Pentacles",
-        meaning: "Geduld, betrouwbaarheid, hard werken en stap voor stap vooruitgaan."
+        upright: "Geduld, betrouwbaarheid, hard werken en stap voor stap vooruitgaan.",
+        reversed: "Vastzitten, verveling, traagheid of te weinig initiatief."
     },
+
     {
         name: "Queen of Pentacles",
-        meaning: "Zorgzaamheid, stabiliteit, praktisch denken en comfort."
+        upright: "Zorgzaamheid, stabiliteit, praktisch denken en comfort.",
+        reversed: "Te veel zorgen voor anderen, gebrek aan balans of jezelf vergeten."
     },
+
     {
         name: "King of Pentacles",
-        meaning: "Succes, stabiliteit, verantwoordelijkheid en materiële zekerheid."
+        upright: "Succes, stabiliteit, verantwoordelijkheid en materiële zekerheid.",
+        reversed: "Hebzucht, materialisme, controle of te veel waarde hechten aan geld en status."
     }
 ];
 
 
 // =====================================
-// ELEMENTEN VAN DE PAGINA
+// HTML-ELEMENTEN
 // =====================================
 
 const cardContainer = document.getElementById("cardContainer");
@@ -352,6 +508,7 @@ const noResults = document.getElementById("noResults");
 // =====================================
 
 function showCards(cards) {
+
     cardContainer.innerHTML = "";
 
     if (cards.length === 0) {
@@ -362,6 +519,7 @@ function showCards(cards) {
     noResults.style.display = "none";
 
     cards.forEach(card => {
+
         const cardElement = document.createElement("div");
 
         cardElement.className = "tarot-card";
@@ -371,7 +529,15 @@ function showCards(cards) {
 
             <div class="card-line"></div>
 
-            <p>${card.meaning}</p>
+            <div class="meaning-section">
+                <h3>✦ Upright</h3>
+                <p>${card.upright}</p>
+            </div>
+
+            <div class="meaning-section">
+                <h3>↕ Reversed</h3>
+                <p>${card.reversed}</p>
+            </div>
         `;
 
         cardContainer.appendChild(cardElement);
@@ -380,21 +546,24 @@ function showCards(cards) {
 
 
 // =====================================
-// ZOEKEN
+// ZOEKFUNCTIE
 // =====================================
 
 searchInput.addEventListener("input", function () {
 
     const search = this.value.toLowerCase().trim();
 
-    // Als de zoekbalk leeg is
+    // Zoekbalk is leeg
     if (search === "") {
+
         cardContainer.innerHTML = "";
+
         noResults.style.display = "none";
+
         return;
     }
 
-    // Zoek naar kaarten die overeenkomen
+    // Zoek naar kaarten
     const results = tarotCards.filter(card =>
         card.name.toLowerCase().includes(search)
     );
