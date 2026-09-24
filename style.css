@@ -19,7 +19,8 @@ body {
 
     color: #211d19;
 
-    background-image: url("background.jpg");
+    /* JUISTE ACHTERGROND */
+    background-image: url("background.jpeg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -28,7 +29,7 @@ body {
 
 
 /* =====================================
-   DONKERE BOVENBALK
+   BOVENSTE BALK
 ===================================== */
 
 .top-bar {
@@ -49,7 +50,6 @@ body {
 
     z-index: 1000;
 }
-
 
 .logo {
     color: #eee8df;
@@ -74,8 +74,7 @@ body {
     margin: 0 auto;
 
     padding-top: 115px;
-
-    padding-bottom: 80px;
+    padding-bottom: 70px;
 }
 
 
@@ -90,9 +89,9 @@ body {
 
     justify-content: space-between;
 
-    gap: 55px;
+    gap: 70px;
 
-    margin-bottom: 55px;
+    margin-bottom: 65px;
 }
 
 
@@ -113,8 +112,7 @@ body {
 
     border-radius: 12px;
 
-    box-shadow:
-        0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 
     display: flex;
 
@@ -122,20 +120,15 @@ body {
 
     justify-content: center;
 
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: 0.3s ease;
 }
-
 
 .text-box:hover {
     transform: translateY(-4px);
 
     background: rgba(250, 247, 239, 0.84);
 
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.14);
 }
 
 
@@ -150,20 +143,17 @@ body {
     font-weight: normal;
 
     margin-top: 0;
-
     margin-bottom: 20px;
 }
-
 
 .text-box h1 {
     font-size: 29px;
 }
 
-
 .text-box h2 {
     font-size: 27px;
 
-    color: #ffffff;
+    color: white;
 }
 
 
@@ -183,142 +173,75 @@ body {
 
 
 /* =====================================
-   FOTO FRAMES
-===================================== */
-
-.photo-frame {
-    position: relative;
-
-    flex-shrink: 0;
-
-    background: #eee4d2;
-
-    border: 3px solid #f2e9d9;
-
-    outline: 1px solid rgba(100, 80, 55, 0.25);
-
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.18);
-
-    padding: 27px;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-
-/* decoratieve binnenrand */
-
-.photo-frame::before {
-    content: "";
-
-    position: absolute;
-
-    inset: 8px;
-
-    border: 2px dotted rgba(105, 85, 60, 0.45);
-
-    pointer-events: none;
-
-    z-index: 2;
-}
-
-
-/* =====================================
    FOTO'S
 ===================================== */
 
-.photo-frame img {
+/*
+   GEEN RAND
+   GEEN FRAME
+   GEEN ROTATIE
+*/
+
+.photo {
+    width: 350px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.photo img {
     display: block;
 
     width: 100%;
 
-    height: 100%;
+    height: auto;
 
-    object-fit: cover;
+    object-fit: contain;
 
-    filter: grayscale(100%);
+    /* helemaal recht */
+    transform: none;
+
+    /* geen extra rand */
+    border: none;
+
+    outline: none;
+
+    box-shadow: none;
 }
 
 
 /* =====================================
-   MAAN
+   FOTOFORMATEN
 ===================================== */
 
-.moon-frame {
-    width: 220px;
+/* maan */
 
-    height: 175px;
-
-    padding: 25px;
-
-    transform: rotate(-1deg);
+.content-row:nth-child(1) .photo {
+    width: 300px;
 }
 
 
-.moon-frame:hover {
-    transform: rotate(0deg) translateY(-5px);
+/* meisje */
 
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.25);
+.content-row:nth-child(2) .photo {
+    width: 270px;
 }
 
 
-/* =====================================
-   MEISJE
-===================================== */
+/* schoenen */
 
-.girl-frame {
-    width: 220px;
-
-    height: 290px;
-
-    padding: 27px;
-
-    transform: rotate(1deg);
-}
-
-
-.girl-frame:hover {
-    transform: rotate(0deg) translateY(-5px);
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.25);
-}
-
-
-/* =====================================
-   SCHOENEN
-===================================== */
-
-.shoes-frame {
+.content-row:nth-child(3) .photo {
     width: 350px;
-
-    height: 245px;
-
-    padding: 28px;
-
-    transform: rotate(-0.5deg);
-}
-
-
-.shoes-frame:hover {
-    transform: rotate(0deg) translateY(-5px);
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 
 /* =====================================
-   CREDITS
+   HARTJE
 ===================================== */
-
-.credits {
-    min-height: 245px;
-}
-
 
 .heart {
     text-align: center;
@@ -326,6 +249,45 @@ body {
     font-size: 25px;
 
     margin-top: 10px;
+}
+
+
+/* =====================================
+   LINK NAAR PAGINA 2
+===================================== */
+
+.next-page {
+    text-align: center;
+
+    margin-top: 10px;
+}
+
+.next-page a {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    color: #ffffff;
+
+    background: rgba(30, 25, 22, 0.80);
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    transition: 0.3s ease;
+}
+
+.next-page a:hover {
+    background: rgba(255, 255, 255, 0.75);
+
+    color: #211d19;
+
+    transform: translateY(-3px);
 }
 
 
@@ -351,23 +313,10 @@ body {
         width: 100%;
     }
 
-    .photo-frame {
-        order: 2;
-    }
+    .photo {
+        width: 80% !important;
 
-    .moon-frame {
-        width: 200px;
-        height: 160px;
-    }
-
-    .girl-frame {
-        width: 200px;
-        height: 270px;
-    }
-
-    .shoes-frame {
-        width: 300px;
-        height: 215px;
+        max-width: 350px;
     }
 }
 
@@ -396,18 +345,27 @@ body {
         font-size: 16px;
     }
 
-    .moon-frame {
-        width: 180px;
-        height: 145px;
+    .photo {
+        width: 90% !important;
     }
+}
+/* =====================================
+   WELCOME TEKST
+===================================== */
 
-    .girl-frame {
-        width: 185px;
-        height: 250px;
-    }
+.welcome {
+    text-align: center;
 
-    .shoes-frame {
-        width: 270px;
-        height: 195px;
-    }
+    color: #ffffff;
+
+    font-size: 30px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    margin-bottom: 45px;
+
+    text-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.5);
+
+    letter-spacing: 1px;
 }
