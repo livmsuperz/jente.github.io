@@ -19,11 +19,14 @@ body {
 
     color: #211d19;
 
-    /* JUISTE ACHTERGROND */
     background-image: url("background.jpeg");
+
     background-size: cover;
+
     background-position: center;
+
     background-attachment: fixed;
+
     background-repeat: no-repeat;
 }
 
@@ -46,10 +49,12 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.45);
 
     display: flex;
+
     align-items: center;
 
     z-index: 1000;
 }
+
 
 .logo {
     color: #eee8df;
@@ -74,12 +79,33 @@ body {
     margin: 0 auto;
 
     padding-top: 115px;
+
     padding-bottom: 70px;
 }
 
 
 /* =====================================
-   RIJEN
+   WELCOME
+===================================== */
+
+.welcome {
+    text-align: center;
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    margin-bottom: 50px;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =====================================
+   DE 3 RIJEN
 ===================================== */
 
 .content-row {
@@ -112,7 +138,8 @@ body {
 
     border-radius: 12px;
 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.08);
 
     display: flex;
 
@@ -123,12 +150,14 @@ body {
     transition: 0.3s ease;
 }
 
+
 .text-box:hover {
     transform: translateY(-4px);
 
     background: rgba(250, 247, 239, 0.84);
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.14);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.14);
 }
 
 
@@ -143,17 +172,20 @@ body {
     font-weight: normal;
 
     margin-top: 0;
+
     margin-bottom: 20px;
 }
+
 
 .text-box h1 {
     font-size: 29px;
 }
 
+
 .text-box h2 {
     font-size: 27px;
 
-    color: white;
+    color: #ffffff;
 }
 
 
@@ -173,25 +205,21 @@ body {
 
 
 /* =====================================
-   FOTO'S
+   AFBEELDINGEN
 ===================================== */
-
-/*
-   GEEN RAND
-   GEEN FRAME
-   GEEN ROTATIE
-*/
 
 .photo {
     width: 350px;
 
+    flex-shrink: 0;
+
     display: flex;
 
     justify-content: center;
-    align-items: center;
 
-    flex-shrink: 0;
+    align-items: center;
 }
+
 
 .photo img {
     display: block;
@@ -202,39 +230,42 @@ body {
 
     object-fit: contain;
 
-    /* helemaal recht */
-    transform: none;
-
-    /* geen extra rand */
+    /* GEEN RAND */
     border: none;
 
     outline: none;
 
+    /* GEEN SCHADUW */
     box-shadow: none;
+
+    /* GEEN ROTATIE */
+    transform: none;
 }
 
 
 /* =====================================
-   FOTOFORMATEN
+   MAAN
 ===================================== */
 
-/* maan */
-
-.content-row:nth-child(1) .photo {
+.content-row:nth-of-type(1) .photo {
     width: 300px;
 }
 
 
-/* meisje */
+/* =====================================
+   MEISJE
+===================================== */
 
-.content-row:nth-child(2) .photo {
+.content-row:nth-of-type(2) .photo {
     width: 270px;
 }
 
 
-/* schoenen */
+/* =====================================
+   SCHOENEN
+===================================== */
 
-.content-row:nth-child(3) .photo {
+.content-row:nth-of-type(3) .photo {
     width: 350px;
 }
 
@@ -262,6 +293,7 @@ body {
     margin-top: 10px;
 }
 
+
 .next-page a {
     display: inline-block;
 
@@ -281,6 +313,7 @@ body {
 
     transition: 0.3s ease;
 }
+
 
 .next-page a:hover {
     background: rgba(255, 255, 255, 0.75);
@@ -318,12 +351,9 @@ body {
 
         max-width: 350px;
     }
+
 }
 
-
-/* =====================================
-   KLEINE TELEFOON
-===================================== */
 
 @media (max-width: 500px) {
 
@@ -337,6 +367,10 @@ body {
         padding-top: 95px;
     }
 
+    .welcome {
+        font-size: 22px;
+    }
+
     .text-box {
         padding: 25px;
     }
@@ -348,24 +382,5 @@ body {
     .photo {
         width: 90% !important;
     }
-}
-/* =====================================
-   WELCOME TEKST
-===================================== */
 
-.welcome {
-    text-align: center;
-
-    color: #ffffff;
-
-    font-size: 30px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    margin-bottom: 45px;
-
-    text-shadow:
-        0 1px 4px rgba(0, 0, 0, 0.5);
-
-    letter-spacing: 1px;
 }
