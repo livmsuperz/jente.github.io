@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tarot - Moon Whisp</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         TOP BAR
+    ====================================== -->
+
+    <header class="top-bar">
+
+        <div class="logo">
+            ✧:Moon Whisp:✧
+        </div>
+
+        <!-- ZOEKEN -->
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for a tarot card..."
+                autocomplete="off"
+            >
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         PAGINA
+    ====================================== -->
+
+    <main class="tarot-page">
+
+        <h1 class="tarot-title">
+            Tarot Cards
+        </h1>
+
+        <p class="tarot-subtitle">
+            ✧ find the meaning of your card ✧
+        </p>
+
+
+        <!-- HIER KOMEN DE KAARTEN -->
+        <div id="cardContainer" class="card-container"></div>
+
+
+        <!-- GEEN RESULTATEN -->
+        <div id="noResults" class="no-results">
+            No tarot card found.
+        </div>
+
+
+        <!-- TERUG NAAR HOMEPAGE -->
+        <div class="back-home">
+
+            <a href="index.html">
+                ✧ back to home ✧
+            </a>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================
+         TAROT JAVASCRIPT
+    ====================================== -->
+    
+    <script src="script.js"></script>
+
+</body>
+
+</html>

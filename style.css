@@ -384,3 +384,314 @@ body {
     }
 
 }
+/* =====================================
+   TAROT PAGINA
+===================================== */
+
+.tarot-page {
+    width: 1050px;
+
+    max-width: 90%;
+
+    margin: 0 auto;
+
+    padding-top: 130px;
+
+    padding-bottom: 80px;
+}
+
+
+/* =====================================
+   ZOEKBALK
+===================================== */
+
+.search-container {
+    margin-left: auto;
+
+    margin-right: 35px;
+}
+
+
+#searchInput {
+    width: 280px;
+
+    padding: 10px 16px;
+
+    border: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 15px;
+}
+
+
+#searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+#searchInput:focus {
+    background: rgba(255, 255, 255, 0.14);
+
+    border-bottom: 1px solid white;
+}
+
+
+/* =====================================
+   TITEL
+===================================== */
+
+.tarot-title {
+    text-align: center;
+
+    color: white;
+
+    font-size: 38px;
+
+    font-weight: normal;
+
+    margin: 0;
+}
+
+
+.tarot-subtitle {
+    text-align: center;
+
+    color: white;
+
+    font-size: 17px;
+
+    margin-top: 10px;
+
+    margin-bottom: 50px;
+}
+
+
+/* =====================================
+   KAARTEN
+===================================== */
+
+.card-container {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* =====================================
+   TAROT BLOK
+===================================== */
+
+.tarot-card {
+    width: 600px;
+
+    max-width: 100%;
+
+    min-height: 220px;
+
+    padding: 35px 45px;
+
+    background: rgba(245, 241, 231, 0.82);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+
+    animation: cardAppear 0.3s ease;
+
+    transition: 0.3s ease;
+}
+
+
+.tarot-card:hover {
+    transform: translateY(-5px);
+
+    background: rgba(250, 247, 239, 0.92);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+.tarot-card h2 {
+    font-size: 29px;
+
+    font-weight: normal;
+
+    margin-top: 0;
+
+    margin-bottom: 15px;
+}
+
+
+.tarot-card p {
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* =====================================
+   LIJNTJE IN KAART
+===================================== */
+
+.card-line {
+    width: 100px;
+
+    height: 1px;
+
+    margin: 0 auto 20px auto;
+
+    background: rgba(70, 60, 50, 0.45);
+}
+
+
+/* =====================================
+   GEEN RESULTATEN
+===================================== */
+
+.no-results {
+    display: none;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 18px;
+
+    margin-top: 40px;
+}
+
+
+/* =====================================
+   TERUG NAAR HOME
+===================================== */
+
+.back-home {
+    text-align: center;
+
+    margin-top: 60px;
+}
+
+
+.back-home a {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    color: white;
+
+    background: rgba(30, 25, 22, 0.80);
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: 0.3s ease;
+}
+
+
+.back-home a:hover {
+    background: rgba(255, 255, 255, 0.8);
+
+    color: #211d19;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   ANIMATIE
+===================================== */
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================
+   MOBIEL
+===================================== */
+
+@media (max-width: 700px) {
+
+    .top-bar {
+        height: auto;
+
+        min-height: 70px;
+
+        padding: 12px 0;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+
+    .logo {
+        margin-left: 20px;
+    }
+
+
+    .search-container {
+        width: 100%;
+
+        margin: 0 20px;
+    }
+
+
+    #searchInput {
+        width: 100%;
+    }
+
+
+    .tarot-page {
+        padding-top: 125px;
+    }
+
+
+    .tarot-title {
+        font-size: 30px;
+    }
+
+
+    .tarot-card {
+        padding: 28px 25px;
+    }
+
+}
