@@ -723,3 +723,14 @@ body {
     z-index: 900;
     pointer-events: none;
 }
+/* =========================
+   TAROT PAGINA ACHTERGROND
+   ========================= */
+
+body.tarot-body {
+    background-image: url("tarot-background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
